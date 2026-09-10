@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Edit Profile - SocialSphere">
+  <title>Edit Profile - SocialSphere</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- HEADER NAVIGATION -->
+  <header class="header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🌐</div>
+        <span>SocialSphere</span>
+      </a>
+      <div id="navbar-actions" class="nav-links"></div>
+    </nav>
+  </header>
+
+  <!-- EDIT PROFILE CONTAINER -->
+  <div class="auth-wrapper" style="max-width: 560px;">
+    <div class="auth-card">
+      <div class="auth-header">
+        <h1 class="auth-title">Edit Profile</h1>
+        <p class="auth-subtitle">Update your personal information and profile picture</p>
+      </div>
+
+      <form id="edit-profile-form">
+        <div class="form-group">
+          <label class="form-label" for="edit-fullname">Full Name</label>
+          <input type="text" id="edit-fullname" class="form-input" placeholder="Your full name" required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="edit-bio">Bio</label>
+          <textarea id="edit-bio" class="form-input" rows="4" placeholder="Tell the world a bit about yourself..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="edit-image">Profile Image URL</label>
+          <input type="url" id="edit-image" class="form-input" placeholder="https://example.com/my-photo.jpg" />
+        </div>
+
+        <div style="display: flex; gap: 0.75rem; margin-top: 1.5rem;">
+          <button type="submit" id="edit-submit-btn" class="btn-primary form-btn-full">Save Changes</button>
+          <a href="index.html" class="btn-outline form-btn-full" style="text-align: center; display: inline-block;">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/common.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>

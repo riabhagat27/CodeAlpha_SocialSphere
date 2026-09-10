@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Log in to SocialSphere - CodeAlpha Internship Project">
+  <title>Log In - SocialSphere</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- HEADER NAVIGATION -->
+  <header class="header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🌐</div>
+        <span>SocialSphere</span>
+      </a>
+      <div id="navbar-actions" class="nav-links"></div>
+    </nav>
+  </header>
+
+  <!-- AUTH CONTAINER -->
+  <div class="auth-wrapper">
+    <div class="auth-card">
+      <div class="auth-header">
+        <div class="logo-icon" style="margin: 0 auto 0.5rem auto;">🌐</div>
+        <h1 class="auth-title">Welcome Back</h1>
+        <p class="auth-subtitle">Log in to access your feed, posts, and profile</p>
+      </div>
+
+      <form id="login-form">
+        <div class="form-group">
+          <label class="form-label" for="login-input">Username or Email</label>
+          <input type="text" id="login-input" class="form-input" placeholder="e.g. alex_dev or alex@socialsphere.com" required autocomplete="username" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="password-input">Password</label>
+          <input type="password" id="password-input" class="form-input" placeholder="••••••••" required autocomplete="current-password" />
+        </div>
+
+        <button type="submit" id="login-submit-btn" class="btn-primary form-btn-full">Log In</button>
+      </form>
+
+      <!-- DEMO CREDENTIALS QUICK FILL FOR INTERNSHIP EVALUATION -->
+      <div style="margin-top: 1.5rem; padding: 0.85rem; background: var(--primary-light); border-radius: var(--radius-md); font-size: 0.82rem; color: var(--text-main);">
+        <strong style="color: var(--primary-color);">💡 Demo Accounts (Password: password123)</strong>
+        <div style="margin-top: 0.4rem; display: flex; flex-wrap: wrap; gap: 0.4rem;">
+          <button type="button" class="btn-outline" style="padding: 0.25rem 0.5rem; font-size: 0.75rem; background: white;" onclick="document.getElementById('login-input').value='alex_dev'; document.getElementById('password-input').value='password123';">
+            Alex Morgan
+          </button>
+          <button type="button" class="btn-outline" style="padding: 0.25rem 0.5rem; font-size: 0.75rem; background: white;" onclick="document.getElementById('login-input').value='sarah_design'; document.getElementById('password-input').value='password123';">
+            Sarah Chen
+          </button>
+        </div>
+      </div>
+
+      <div class="auth-footer">
+        Don't have an account yet? <a href="register.html">Sign Up</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/common.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

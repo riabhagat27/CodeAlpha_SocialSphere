@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="User Profile - SocialSphere">
+  <title>User Profile - SocialSphere</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- HEADER NAVIGATION -->
+  <header class="header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🌐</div>
+        <span>SocialSphere</span>
+      </a>
+
+      <!-- USER DISCOVERY / SEARCH -->
+      <div class="search-container">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search-input" class="search-input" placeholder="Search people..." autocomplete="off" />
+        <div id="search-results" class="search-results"></div>
+      </div>
+
+      <!-- DYNAMIC NAV ACTIONS -->
+      <div id="navbar-actions" class="nav-links"></div>
+    </nav>
+  </header>
+
+  <!-- MAIN PROFILE CONTAINER -->
+  <main class="container">
+    
+    <!-- PROFILE HEADER CARD (Rendered by profile.js) -->
+    <div id="profile-card-container">
+      <div class="empty-state">Loading user profile...</div>
+    </div>
+
+    <!-- USER POSTS FEED (Rendered by profile.js) -->
+    <section>
+      <h2 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-main);">User Activity & Posts</h2>
+      <div id="user-posts-container">
+        <!-- Posts rendered here -->
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/common.js"></script>
+  <script src="js/feed.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>

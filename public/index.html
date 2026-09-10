@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SocialSphere - Mini Social Media Platform (CodeAlpha Full Stack Development Internship Task 2)">
+  <title>SocialSphere - Mini Social Media Platform</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- HEADER NAVIGATION -->
+  <header class="header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🌐</div>
+        <span>SocialSphere</span>
+      </a>
+
+      <!-- USER DISCOVERY / SEARCH -->
+      <div class="search-container">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search-input" class="search-input" placeholder="Search people..." autocomplete="off" />
+        <div id="search-results" class="search-results"></div>
+      </div>
+
+      <!-- DYNAMIC NAV ACTIONS -->
+      <div id="navbar-actions" class="nav-links">
+        <!-- Rendered by common.js -->
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN FEED CONTAINER -->
+  <main class="container">
+    <div class="layout-grid">
+      
+      <!-- FEED COLUMN -->
+      <section class="feed-column">
+        
+        <!-- CREATE POST CARD (Visible to logged in users) -->
+        <div id="create-post-card" class="create-post-card" style="display: none;">
+          <form id="create-post-form">
+            <div class="create-post-header">
+              <textarea id="post-content-input" class="create-post-input" placeholder="What's on your mind today?" required></textarea>
+            </div>
+            
+            <div id="image-input-container" class="image-input-container">
+              <input type="url" id="post-image-input" class="image-url-field" placeholder="Paste image URL (optional)..." />
+            </div>
+
+            <div class="create-post-actions">
+              <button type="button" id="toggle-image-btn" class="attach-btn">
+                🖼️ Add Image URL
+              </button>
+              <button type="submit" id="create-post-btn" class="btn-primary">Publish Post</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- POSTS FEED -->
+        <div id="feed-container">
+          <!-- Rendered dynamically by feed.js -->
+        </div>
+      </section>
+
+      <!-- SIDEBAR WIDGETS -->
+      <aside class="sidebar-column">
+        
+        <div class="sidebar-card">
+          <h3 class="sidebar-title">CodeAlpha Task 2</h3>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.75rem;">
+            Full-stack social media platform with Node.js, Express, SQLite database, bcrypt authentication, and REST API.
+          </p>
+          <div style="font-size: 0.78rem; background: var(--primary-light); color: var(--primary-color); padding: 0.4rem 0.6rem; border-radius: var(--radius-sm); font-weight: 600;">
+            ✓ Real Database Operations
+          </div>
+        </div>
+
+        <div class="sidebar-card">
+          <h3 class="sidebar-title">Suggested People</h3>
+          <div id="suggested-users">
+            <!-- Rendered by feed.js -->
+          </div>
+        </div>
+
+      </aside>
+    </div>
+  </main>
+
+  <!-- SCRIPTS -->
+  <script src="js/common.js"></script>
+  <script src="js/feed.js"></script>
+</body>
+</html>

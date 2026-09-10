@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Register an account on SocialSphere - CodeAlpha Internship Project">
+  <title>Create Account - SocialSphere</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- HEADER NAVIGATION -->
+  <header class="header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🌐</div>
+        <span>SocialSphere</span>
+      </a>
+      <div id="navbar-actions" class="nav-links"></div>
+    </nav>
+  </header>
+
+  <!-- AUTH CONTAINER -->
+  <div class="auth-wrapper">
+    <div class="auth-card">
+      <div class="auth-header">
+        <div class="logo-icon" style="margin: 0 auto 0.5rem auto;">🌐</div>
+        <h1 class="auth-title">Join SocialSphere</h1>
+        <p class="auth-subtitle">Create your full-stack social profile today</p>
+      </div>
+
+      <form id="register-form">
+        <div class="form-group">
+          <label class="form-label" for="fullname-input">Full Name</label>
+          <input type="text" id="fullname-input" class="form-input" placeholder="e.g. John Doe" required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="username-input">Username</label>
+          <input type="text" id="username-input" class="form-input" placeholder="e.g. johndoe_dev" required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="email-input">Email Address</label>
+          <input type="email" id="email-input" class="form-input" placeholder="e.g. john@example.com" required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="password-input">Password</label>
+          <input type="password" id="password-input" class="form-input" placeholder="Min. 6 characters" required autocomplete="new-password" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="confirm-password-input">Confirm Password</label>
+          <input type="password" id="confirm-password-input" class="form-input" placeholder="Re-enter password" required autocomplete="new-password" />
+        </div>
+
+        <button type="submit" id="register-submit-btn" class="btn-primary form-btn-full">Create Account</button>
+      </form>
+
+      <div class="auth-footer">
+        Already have an account? <a href="login.html">Log In</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/common.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
