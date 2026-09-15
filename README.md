@@ -141,15 +141,17 @@ Configure the following environment variables in your Render Web Service dashboa
 
 ## 🔐 Demo Credentials
 
-When running `npm run seed`, the following accounts are pre-created:
+SocialSphere automatically seeds demo data (users, posts, comments, likes, and follow relationships) whenever the application starts with an empty database (such as on a clean Render deployment).
+
+The pre-seeded demo accounts are:
 
 | Name | Username | Email | Password |
 |---|---|---|---|
-| **Alex Morgan** | `alex_dev` | `alex@socialsphere.com` | `password123` |
-| **Sarah Chen** | `sarah_design` | `sarah@socialsphere.com` | `password123` |
-| **CodeAlpha Team** | `code_alpha` | `internship@codealpha.tech` | `password123` |
+| **Alex Johnson** | `alex` | `alex@example.com` | `Demo@123` |
+| **Sarah Williams** | `sarah` | `sarah@example.com` | `Demo@123` |
+| **Rahul Sharma** | `rahul` | `rahul@example.com` | `Demo@123` |
 
-*(You can also register brand new users directly from the Registration page).*
+*(You can also register brand new accounts directly from the Registration page).*
 
 ---
 
