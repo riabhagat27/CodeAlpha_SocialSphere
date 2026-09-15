@@ -108,7 +108,34 @@ npm run seed
 ```bash
 npm start
 ```
-The server will start at: **`http://localhost:3000`**
+The server will start at: **`http://localhost:5000`**
+
+---
+
+## 🌐 Deployment on Render
+
+SocialSphere is configured for seamless deployment as a **Render Web Service**.
+
+### Render Configuration Settings
+
+- **Environment / Runtime**: `Node`
+- **Build Command**: `npm install`
+- **Start Command**: `npm start`
+- **Health Check Path**: `/health`
+
+### Environment Variables
+
+Configure the following environment variables in your Render Web Service dashboard:
+
+| Variable Name | Required | Description | Default / Example |
+|---|---|---|---|
+| `PORT` | Optional | Port allocated by Render | `10000` (auto-assigned by Render) |
+| `JWT_SECRET` | Recommended | Secret key used to sign & verify JWT tokens | `your_secure_random_production_secret` |
+
+### ⚠️ SQLite Persistence Limitation Note
+
+- **Ephemeral Filesystem**: Render's free tier web service filesystem is ephemeral. Data stored in `database.sqlite` will reset whenever the application restarts or redeploys.
+- **Production Data Persistence**: For persistent storage in production, a Render Persistent Disk can be mounted to store `database.sqlite`, or a managed PostgreSQL database can be connected if long-term storage is required. For demonstration and evaluation purposes, SQLite initializes dynamically on first launch.
 
 ---
 
