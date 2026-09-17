@@ -5,6 +5,12 @@
 
 ---
 
+## 🚀 Live Demo
+
+[Visit SocialSphere](https://codealpha-socialsphere-r4z8.onrender.com)
+
+---
+
 ## 📌 Project Overview
 
 **SocialSphere** is a complete, full-stack mini social media web application developed for **Task 2 of the CodeAlpha Full Stack Development Internship**. 
